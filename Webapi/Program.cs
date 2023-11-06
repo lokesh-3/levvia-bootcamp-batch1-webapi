@@ -1,4 +1,6 @@
 using CodePulse.API.Services.EmailService;
+using Webapi.IServices;
+using Webapi.FileService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IEmailService, EmailServices>();
+builder.Services.AddScoped<IFileService, FileService>();
 
 var app = builder.Build();
 
