@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "p+B/6WVj+x07i0eF1t+LltmK8Qtkav1cihgmNotUZo8Mw5ZFf+Jx8762yZvvoME7PH9U93cLQU9mkW8GGwabwg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amarkant.semwal\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\amarkant.semwal\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
