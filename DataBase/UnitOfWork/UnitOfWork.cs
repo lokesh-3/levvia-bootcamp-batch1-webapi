@@ -16,7 +16,7 @@ namespace DataBase.UnitOfWork
         {
             _context = context;
             engagements = new EngagementRepository(_context);
-
+            country=new CountryRepository(_context);
         }
         public int Complete()
         {
@@ -30,7 +30,7 @@ namespace DataBase.UnitOfWork
 
         public IEngagementRepository engagements { get; private set; }
 
-        
+        public ICountryRepository country { get; private set; }
 
         public IGenericRepository<T> GetGenericRepository<T>() where T : class
         {
