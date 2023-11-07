@@ -15,7 +15,6 @@ namespace LevviaApi.Controllers
 
         public CommanController(ICommanService commanSevice)
         {
-            
             _commanSevice = commanSevice;
         }
 
@@ -36,29 +35,6 @@ namespace LevviaApi.Controllers
         }
 
 
-        // GET api/<CommanController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<CommanController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<CommanController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CommanController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+       
     }
 }

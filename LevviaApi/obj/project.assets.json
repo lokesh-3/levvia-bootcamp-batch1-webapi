@@ -3432,11 +3432,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\LevviaApi\\LevviaApi.csproj",
+      "projectUniqueName": "D:\\test2\\levvia-bootcamp-batch1-webapi\\LevviaApi\\LevviaApi.csproj",
       "projectName": "LevviaApi",
-      "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\LevviaApi\\LevviaApi.csproj",
+      "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\LevviaApi\\LevviaApi.csproj",
       "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\LevviaApi\\obj\\",
+      "outputPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\LevviaApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3453,14 +3453,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\DataBase.csproj": {
-              "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\DataBase.csproj"
+            "D:\\test2\\levvia-bootcamp-batch1-webapi\\DataBase\\DataBase.csproj": {
+              "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DataBase\\DataBase.csproj"
             },
-            "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj"
+            "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj": {
+              "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj"
             },
-            "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Services\\Services.csproj"
+            "D:\\test2\\levvia-bootcamp-batch1-webapi\\Services\\Services.csproj": {
+              "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Services\\Services.csproj"
             }
           }
         }

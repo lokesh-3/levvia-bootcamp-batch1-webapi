@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj",
+      "projectUniqueName": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj",
+      "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\obj\\",
+      "outputPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
