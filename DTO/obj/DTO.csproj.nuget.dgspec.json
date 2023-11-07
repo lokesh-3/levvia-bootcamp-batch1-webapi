@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj": {}
+    "E:\\LivviaBootCamp\\DTO\\DTO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj": {
+    "E:\\LivviaBootCamp\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj",
+        "projectUniqueName": "E:\\LivviaBootCamp\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\obj\\",
+        "projectPath": "E:\\LivviaBootCamp\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\NV\\.nuget\\packages\\",
+        "outputPath": "E:\\LivviaBootCamp\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NV\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj"
+              "E:\\LivviaBootCamp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\LivviaBootCamp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -69,17 +69,17 @@
         }
       }
     },
-    "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj": {
+    "E:\\LivviaBootCamp\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj",
+        "projectUniqueName": "E:\\LivviaBootCamp\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\obj\\",
+        "projectPath": "E:\\LivviaBootCamp\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\NV\\.nuget\\packages\\",
+        "outputPath": "E:\\LivviaBootCamp\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NV\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

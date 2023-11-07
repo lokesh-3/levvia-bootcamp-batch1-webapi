@@ -2708,19 +2708,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\amarkant.semwal\\.nuget\\packages\\": {}
+    "C:\\Users\\NV\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Services\\Services.csproj",
+      "projectUniqueName": "E:\\LivviaBootCamp\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Services\\Services.csproj",
-      "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Services\\obj\\",
+      "projectPath": "E:\\LivviaBootCamp\\Services\\Services.csproj",
+      "packagesPath": "C:\\Users\\NV\\.nuget\\packages\\",
+      "outputPath": "E:\\LivviaBootCamp\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\NV\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2734,11 +2734,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\DataBase.csproj": {
-              "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\DataBase.csproj"
+            "E:\\LivviaBootCamp\\DataBase\\DataBase.csproj": {
+              "projectPath": "E:\\LivviaBootCamp\\DataBase\\DataBase.csproj"
             },
-            "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj"
+            "E:\\LivviaBootCamp\\DTO\\DTO.csproj": {
+              "projectPath": "E:\\LivviaBootCamp\\DTO\\DTO.csproj"
             }
           }
         }
