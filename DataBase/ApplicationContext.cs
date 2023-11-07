@@ -13,6 +13,8 @@ namespace DataBase
         public DbSet<Engagement> engagements { get; set; }
         public DbSet<Country>  countries { get; set; }
 
-        
+        public DbSet<AuditMaster> auditMasters { get; set; }
+
+
     }
 }
