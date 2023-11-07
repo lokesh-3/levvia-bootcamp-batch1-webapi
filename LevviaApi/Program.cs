@@ -21,10 +21,15 @@ builder.Services.AddSwaggerGen();
 //Repos:
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEngagementRepository, EngagementRepository>();
+builder.Services.AddScoped<ICountryRepository, CountryRepository>();
+
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
 
 //Services
 builder.Services.AddScoped<IEngagementSevice, EngagementService>();
+builder.Services.AddScoped<ICommanService, CommanService>();
+
 
 // SQL Connection
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

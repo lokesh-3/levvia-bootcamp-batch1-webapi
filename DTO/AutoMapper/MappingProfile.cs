@@ -13,7 +13,7 @@ namespace DTO.AutoMapper
         public MappingProfile()
         {
             CreateMap<Engagement, EngagementDTO>().ReverseMap();
-            
+            CreateMap<Country, CountryDTO>().ReverseMap();
         }
     }
 }
