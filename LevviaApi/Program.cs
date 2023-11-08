@@ -26,6 +26,8 @@ builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 builder.Services.AddScoped<IAudtiMasterRepository, AudtiMasterRepository>();
 builder.Services.AddScoped<IEmailService, EmailServices>();
 builder.Services.AddScoped<IAuditReportService, AuditReportService>();
+builder.Services.AddScoped<IFileRepository, FileRepository>();
+builder.Services.AddScoped<IFileService, FileService>();
 
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
