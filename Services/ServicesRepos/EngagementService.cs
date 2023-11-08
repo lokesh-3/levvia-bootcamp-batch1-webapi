@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using DataBase.UnitOfWork;
 using DTO;
+using Entities;
 using Services.Interface;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Services.ServicesRepos
 {
-    public class EngagementService: IEngagementSevice
+    public class EngagementService : IEngagementSevice
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -20,6 +21,22 @@ namespace Services.ServicesRepos
             this._unitOfWork = unitOfWork;
             _mapper = mapper;
 
+        }
+
+        public async Task<EngagementDTO> AddEngagement(EngagementDTO engagementDTO)
+        {
+            EngagementDTO engagement = new EngagementDTO();
+            var eng = new Engagement();
+
+            eng.ClientName = engagementDTO.ClientName;
+            eng.ClientId = engagementDTO.ClientId;
+            eng.EngagementStartDate = engagementDTO.EngagementStartDate;
+            eng.EngagementEndDate = engagementDTO.EngagementEndDate;
+            var user = await _unitOfWork.engagements.AddEngagement(eng);
+            _unitOfWork.Complete();
+            engagement.ClientId = user.ClientId;
+            engagement.ClientName = user.ClientName;
+            return engagement;
         }
 
         public async Task<List<EngagementDTO>> GetAllEngagements()

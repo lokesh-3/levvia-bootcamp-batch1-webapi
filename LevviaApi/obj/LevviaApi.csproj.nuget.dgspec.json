@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\LevviaApi\\LevviaApi.csproj": {}
+    "D:\\test2\\levvia-bootcamp-batch1-webapi\\LevviaApi\\LevviaApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\DataBase.csproj": {
+    "D:\\test2\\levvia-bootcamp-batch1-webapi\\DataBase\\DataBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\DataBase.csproj",
+        "projectUniqueName": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DataBase\\DataBase.csproj",
         "projectName": "DataBase",
-        "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\DataBase.csproj",
+        "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DataBase\\DataBase.csproj",
         "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\obj\\",
+        "outputPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DataBase\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj"
+              "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj": {
+    "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj",
+        "projectUniqueName": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj",
+        "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj",
         "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\obj\\",
+        "outputPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -109,8 +109,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj"
+              "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj"
               }
             }
           }
@@ -150,14 +150,14 @@
         }
       }
     },
-    "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj": {
+    "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\Entities.csproj",
+        "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Entities\\obj\\",
+        "outputPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -205,14 +205,14 @@
         }
       }
     },
-    "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\LevviaApi\\LevviaApi.csproj": {
+    "D:\\test2\\levvia-bootcamp-batch1-webapi\\LevviaApi\\LevviaApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\LevviaApi\\LevviaApi.csproj",
+        "projectUniqueName": "D:\\test2\\levvia-bootcamp-batch1-webapi\\LevviaApi\\LevviaApi.csproj",
         "projectName": "LevviaApi",
-        "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\LevviaApi\\LevviaApi.csproj",
+        "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\LevviaApi\\LevviaApi.csproj",
         "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\LevviaApi\\obj\\",
+        "outputPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\LevviaApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -229,14 +229,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\DataBase.csproj": {
-                "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\DataBase.csproj"
+              "D:\\test2\\levvia-bootcamp-batch1-webapi\\DataBase\\DataBase.csproj": {
+                "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DataBase\\DataBase.csproj"
               },
-              "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj"
+              "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj": {
+                "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Services\\Services.csproj": {
-                "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Services\\Services.csproj"
+              "D:\\test2\\levvia-bootcamp-batch1-webapi\\Services\\Services.csproj": {
+                "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Services\\Services.csproj"
               }
             }
           }
@@ -254,6 +254,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.2.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -293,14 +297,14 @@
         }
       }
     },
-    "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Services\\Services.csproj": {
+    "D:\\test2\\levvia-bootcamp-batch1-webapi\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Services\\Services.csproj",
+        "projectUniqueName": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Services\\Services.csproj",
+        "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\Services\\obj\\",
+        "outputPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -317,11 +321,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\DataBase.csproj": {
-                "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DataBase\\DataBase.csproj"
+              "D:\\test2\\levvia-bootcamp-batch1-webapi\\DataBase\\DataBase.csproj": {
+                "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DataBase\\DataBase.csproj"
               },
-              "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\amarkant.semwal\\source\\repos\\LevviaProject\\DTO\\DTO.csproj"
+              "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj": {
+                "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj"
               }
             }
           }
@@ -339,6 +343,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.2.0, )"
             }
           },
           "imports": [

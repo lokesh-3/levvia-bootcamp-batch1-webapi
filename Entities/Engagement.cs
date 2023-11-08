@@ -8,9 +8,12 @@ namespace Entities
     {
         [Key]
         public int ClientId { get; set; }
-        public string ClinetName { get; set; }
+        public string ClientName { get; set; }
         [ForeignKey("Country")]
+
         public int CountyId { get; set; }
+        public string EngagementStartDate { get; set; }
+        public string EngagementEndDate { get; set; }
         //public virtual Country Country { get; set; }
 
 
