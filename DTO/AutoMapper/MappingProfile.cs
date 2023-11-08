@@ -14,6 +14,10 @@ namespace DTO.AutoMapper
         {
             CreateMap<Engagement, EngagementDTO>().ReverseMap();
             CreateMap<Country, CountryDTO>().ReverseMap();
+            CreateMap<AuditMaster, AuditMasterDTO>().ReverseMap();
+            
+            
+            CreateMap<Email, EmailDto>().ReverseMap();
         }
     }
 }

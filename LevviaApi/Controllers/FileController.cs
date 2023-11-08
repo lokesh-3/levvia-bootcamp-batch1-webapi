@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using Azure;
+using DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services.Interface;
@@ -14,25 +15,55 @@ namespace LevviaApi.Controllers
         {
             this._fileService = fileService;
         }
+
+        /// <summary>
+        /// Upload single file to engagement
+        /// </summary>
+        /// <param name="file"></param>
+        /// <param name="clientId"></param>
+        /// <returns></returns>
         [HttpPost]
-        [Route("UploadDocument")]
-        public async Task<IActionResult> UploadDocument(IFormFile file, int clientId)
+        [Route("UploadSingleDocument")]
+        public async Task<IActionResult> UploadSDocument(IFormFile file, int clientId)
         {
-            var response = false;
             if (clientId <= 0)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, response);
+                return StatusCode(StatusCodes.Status500InternalServerError, false);
             }
 
-            response = await _fileService.UploadFile(file, clientId);
-
-            if (response == true)
+            try
             {
-                return StatusCode(StatusCodes.Status200OK, response);
+                await _fileService.UploadFile(file, clientId);
+                return StatusCode(StatusCodes.Status200OK, true);
             }
-            else
+            catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, response);
+                return StatusCode(StatusCodes.Status500InternalServerError, false);
+            }
+        }
+
+        /// <summary>
+        /// Upload multiple files to engagement
+        /// </summary>
+        /// <param name="files"></param>
+        /// <param name="clientId"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("UploadMultipleDocuments")]
+        public async Task<IActionResult> UploadDocument(List<IFormFile> files, int clientId)
+        {
+            if (clientId <= 0)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, false);
+            }
+            try
+            {
+                await _fileService.UploadFile(files, clientId);
+                return StatusCode(StatusCodes.Status200OK, true);
+            } 
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, false);
             }
         }
     }

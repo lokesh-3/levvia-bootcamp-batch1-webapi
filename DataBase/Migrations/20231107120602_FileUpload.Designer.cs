@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataBase.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20231107103852_file upload")]
-    partial class fileupload
+    [Migration("20231107120602_FileUpload")]
+    partial class FileUpload
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,6 +52,27 @@ namespace DataBase.Migrations
                     b.ToTable("Attachment");
                 });
 
+            modelBuilder.Entity("Entities.AuditMaster", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AuditName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AuditMaster");
+                });
+
             modelBuilder.Entity("Entities.Country", b =>
                 {
                     b.Property<int>("Id")
@@ -80,9 +101,6 @@ namespace DataBase.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClientId"));
 
-                    b.Property<int>("AttachmentId")
-                        .HasColumnType("int");
-
                     b.Property<string>("ClinetName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -92,20 +110,7 @@ namespace DataBase.Migrations
 
                     b.HasKey("ClientId");
 
-                    b.HasIndex("AttachmentId");
-
                     b.ToTable("Engagement");
-                });
-
-            modelBuilder.Entity("Entities.Engagement", b =>
-                {
-                    b.HasOne("Entities.Attachment", "Attachment")
-                        .WithMany()
-                        .HasForeignKey("AttachmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Attachment");
                 });
 #pragma warning restore 612, 618
         }

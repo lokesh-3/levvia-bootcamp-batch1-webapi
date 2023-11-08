@@ -9,3 +9,14 @@ C:\Users\amarkant.semwal\source\repos\LevviaProject\Entities\obj\Debug\net6.0\En
 C:\Users\amarkant.semwal\source\repos\LevviaProject\Entities\obj\Debug\net6.0\refint\Entities.dll
 C:\Users\amarkant.semwal\source\repos\LevviaProject\Entities\obj\Debug\net6.0\Entities.pdb
 C:\Users\amarkant.semwal\source\repos\LevviaProject\Entities\obj\Debug\net6.0\ref\Entities.dll
+E:\LivviaBootCamp\Entities\bin\Debug\net6.0\Entities.deps.json
+E:\LivviaBootCamp\Entities\bin\Debug\net6.0\Entities.dll
+E:\LivviaBootCamp\Entities\bin\Debug\net6.0\Entities.pdb
+E:\LivviaBootCamp\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\LivviaBootCamp\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
+E:\LivviaBootCamp\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
+E:\LivviaBootCamp\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
+E:\LivviaBootCamp\Entities\obj\Debug\net6.0\Entities.dll
+E:\LivviaBootCamp\Entities\obj\Debug\net6.0\refint\Entities.dll
+E:\LivviaBootCamp\Entities\obj\Debug\net6.0\Entities.pdb
+E:\LivviaBootCamp\Entities\obj\Debug\net6.0\ref\Entities.dll

@@ -11,7 +11,7 @@ namespace DTO
         public int Id { get; set; }
         public string FileName { get; set; }
         public string MimeType { get; set; }
-        public byte[] Content { get; set; }
+        public byte[] FileContent { get; set; }
         public int ClientId { get; set; }
     }
 }

@@ -5,11 +5,19 @@
 namespace DataBase.Migrations
 {
     /// <inheritdoc />
-    public partial class fileupload : Migration
+    public partial class FileUpload : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropForeignKey(
+                name: "FK_Engagement_Country_CountyId",
+                table: "Engagement");
+
+            migrationBuilder.DropIndex(
+                name: "IX_Engagement_CountyId",
+                table: "Engagement");
+
             migrationBuilder.CreateTable(
                 name: "Attachment",
                 columns: table => new
@@ -27,57 +35,41 @@ namespace DataBase.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Country",
+                name: "AuditMaster",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CountyName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AuditName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Country", x => x.Id);
+                    table.PrimaryKey("PK_AuditMaster", x => x.Id);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "Engagement",
-                columns: table => new
-                {
-                    ClientId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ClinetName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CountyId = table.Column<int>(type: "int", nullable: false),
-                    AttachmentId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Engagement", x => x.ClientId);
-                    table.ForeignKey(
-                        name: "FK_Engagement_Attachment_AttachmentId",
-                        column: x => x.AttachmentId,
-                        principalTable: "Attachment",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Engagement_AttachmentId",
-                table: "Engagement",
-                column: "AttachmentId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Country");
-
-            migrationBuilder.DropTable(
-                name: "Engagement");
-
-            migrationBuilder.DropTable(
                 name: "Attachment");
+
+            migrationBuilder.DropTable(
+                name: "AuditMaster");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Engagement_CountyId",
+                table: "Engagement",
+                column: "CountyId");
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Engagement_Country_CountyId",
+                table: "Engagement",
+                column: "CountyId",
+                principalTable: "Country",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
         }
     }
 }

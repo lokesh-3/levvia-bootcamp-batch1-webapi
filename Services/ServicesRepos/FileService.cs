@@ -24,39 +24,41 @@ namespace Services.ServicesRepos
             _mapper = mapper;
 
         }
-        public async Task<bool> UploadFile(IFormFile file, int clientId)
+        public async Task UploadFile(IFormFile file, int clientId)
         {
-            try
+            if (file.Length > 0)
             {
-                if (file.Length > 0)
+                using (var ms = new MemoryStream())
                 {
-                    using (var ms = new MemoryStream())
+                    file.CopyTo(ms);
+                    var newFile = new Attachment();
+                    newFile.ClientId = clientId;
+                    newFile.MimeType = file.ContentType;
+                    newFile.FileName = Path.GetFileName(file.FileName);
+                    newFile.FileContent = ms.ToArray();
+
+                    var supportedTypes = new[] { "pdf", "xls", "xlsx" };
+
+                    var fileExt = System.IO.Path.GetExtension(file.FileName).Substring(1);
+
+                    if (supportedTypes.Contains(fileExt))
                     {
-                        file.CopyTo(ms);
-                        var newFile = new Attachment();
-                        newFile.ClientId = clientId;
-                        newFile.MimeType = file.ContentType;
-                        newFile.FileName = Path.GetFileName(file.FileName);
-                        newFile.Content = ms.ToArray();
-
-                        var supportedTypes = new[] { "pdf", "xls", "xlsx" };
-
-                        var fileExt = System.IO.Path.GetExtension(file.FileName).Substring(1);
-
-                        if (supportedTypes.Contains(fileExt))
-                        {
-                            await _unitOfWork.file.AddAsync(newFile);
-                            _unitOfWork.Complete();
-                            return true;
-                        }
+                        await _unitOfWork.file.AddAsync(newFile);
+                        _unitOfWork.Complete();
                     }
                 }
             }
-            catch (Exception ex)
+        }
+
+        public async Task UploadFile(List<IFormFile> files, int clientId)
+        {
+            if (files.Count > 0)
             {
-                Console.WriteLine(ex.Message);
+                foreach (var file in files)
+                {
+                    await UploadFile(file, clientId);
+                }
             }
-            return false;
         }
     }
 }
