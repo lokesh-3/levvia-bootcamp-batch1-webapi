@@ -63,6 +63,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+var host = builder.Configuration["ui_url"];
+app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins(host));
 
 app.MapControllers();
 
