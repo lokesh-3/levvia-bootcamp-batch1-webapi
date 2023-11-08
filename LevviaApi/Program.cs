@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Services.Interface;
 using Services.ServicesRepos;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -24,6 +25,7 @@ builder.Services.AddScoped<IEngagementRepository, EngagementRepository>();
 builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 builder.Services.AddScoped<IAudtiMasterRepository, AudtiMasterRepository>();
 builder.Services.AddScoped<IEmailService, EmailServices>();
+builder.Services.AddScoped<IAuditReportService, AuditReportService>();
 
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
@@ -32,6 +34,7 @@ builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericReposi
 builder.Services.AddScoped<IEngagementSevice, EngagementService>();
 builder.Services.AddScoped<ICommanService, CommanService>();
 builder.Services.AddScoped<IAudtiMasterService, AudtiMasterService>();
+
 
 
 
