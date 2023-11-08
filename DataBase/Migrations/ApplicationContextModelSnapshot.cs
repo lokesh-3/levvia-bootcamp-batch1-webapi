@@ -21,6 +21,55 @@ namespace DataBase.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Entities.Attachment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ClientId")
+                        .HasColumnType("int");
+
+                    b.Property<byte[]>("Content")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MimeType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Attachment");
+                });
+
+            modelBuilder.Entity("Entities.AuditMaster", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AuditName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AuditMaster");
+                });
+
             modelBuilder.Entity("Entities.Country", b =>
                 {
                     b.Property<int>("Id")
@@ -58,25 +107,7 @@ namespace DataBase.Migrations
 
                     b.HasKey("ClientId");
 
-                    b.HasIndex("CountyId");
-
                     b.ToTable("Engagement");
-                });
-
-            modelBuilder.Entity("Entities.Engagement", b =>
-                {
-                    b.HasOne("Entities.Country", "Country")
-                        .WithMany("Engagements")
-                        .HasForeignKey("CountyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Country");
-                });
-
-            modelBuilder.Entity("Entities.Country", b =>
-                {
-                    b.Navigation("Engagements");
                 });
 #pragma warning restore 612, 618
         }

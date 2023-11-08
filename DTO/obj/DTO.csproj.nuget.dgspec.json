@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj": {}
+    "E:\\LivviaBootCamp\\DTO\\DTO.csproj": {}
   },
   "projects": {
-    "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj": {
+    "E:\\LivviaBootCamp\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj",
+        "projectUniqueName": "E:\\LivviaBootCamp\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-        "outputPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\DTO\\obj\\",
+        "projectPath": "E:\\LivviaBootCamp\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\NV\\.nuget\\packages\\",
+        "outputPath": "E:\\LivviaBootCamp\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NV\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj"
+              "E:\\LivviaBootCamp\\Entities\\Entities.csproj": {
+                "projectPath": "E:\\LivviaBootCamp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -69,17 +69,17 @@
         }
       }
     },
-    "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj": {
+    "E:\\LivviaBootCamp\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj",
+        "projectUniqueName": "E:\\LivviaBootCamp\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\amarkant.semwal\\.nuget\\packages\\",
-        "outputPath": "D:\\test2\\levvia-bootcamp-batch1-webapi\\Entities\\obj\\",
+        "projectPath": "E:\\LivviaBootCamp\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\NV\\.nuget\\packages\\",
+        "outputPath": "E:\\LivviaBootCamp\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\amarkant.semwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NV\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
