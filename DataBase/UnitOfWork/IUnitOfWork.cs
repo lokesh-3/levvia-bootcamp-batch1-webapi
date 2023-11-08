@@ -12,6 +12,7 @@ namespace DataBase.UnitOfWork
         IGenericRepository<T> GetGenericRepository<T>() where T : class;
         IEngagementRepository engagements { get; }
         ICountryRepository country { get; }
+        IFileRepository file { get; }
 
 
         int Complete();

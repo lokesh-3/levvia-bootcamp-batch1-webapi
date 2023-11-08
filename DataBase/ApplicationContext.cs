@@ -14,6 +14,7 @@ namespace DataBase
         public DbSet<Country>  countries { get; set; }
 
         public DbSet<AuditMaster> auditMasters { get; set; }
+        public DbSet<Attachment> attachments { get; set; }
 
 
     }
