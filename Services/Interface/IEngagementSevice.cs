@@ -10,5 +10,6 @@ namespace Services.Interface
     public interface IEngagementSevice
     {
         public Task<List<EngagementDTO>> GetAllEngagements();
+        public Task<EngagementDTO> AddEngagement( EngagementDTO engagementDTO);
     }
 }

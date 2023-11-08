@@ -12,8 +12,12 @@ namespace DataBase.Repository
     {
         public EngagementRepository(ApplicationContext context) : base(context)
         {
-
             
+        }
+        public async Task<Engagement> AddEngagement(Engagement auditorsDetails)
+        {
+            var output = await _context.AddAsync(auditorsDetails);
+            return output.Entity;
         }
     }
 

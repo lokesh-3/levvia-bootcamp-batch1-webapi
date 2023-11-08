@@ -31,6 +31,22 @@ namespace LevviaApi.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
-        
+
+
+
+        [HttpPost("AddEngagement")]
+        public async Task<ActionResult> AddEngagement([FromBody] EngagementDTO  engagementDTO)
+        {
+            try
+            {
+                var remainingMentees = await _engagementSevice.AddEngagement(engagementDTO);
+                return Ok(remainingMentees);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while fetching remaining mentees.");
+            }
+        }
+
     }
 }

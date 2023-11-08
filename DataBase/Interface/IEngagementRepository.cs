@@ -9,7 +9,8 @@ namespace DataBase.Interface
 {
     public interface IEngagementRepository: IGenericRepository<Engagement>
     {
-        
+
+        public Task<Engagement> AddEngagement(Engagement  engagement);
 
     }
 }
