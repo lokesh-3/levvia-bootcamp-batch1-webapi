@@ -1,5 +1,7 @@
 ﻿using DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Web.Resource;
 using Services.Interface;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -8,6 +10,7 @@ namespace LevviaApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
     public class EngagementController : ControllerBase
     {
         private readonly IEngagementSevice  _engagementSevice;
@@ -18,6 +21,7 @@ namespace LevviaApi.Controllers
         }
         // GET: api/<EngagementController>
         [HttpGet("GetAll")]
+        [Authorize(Roles = "EngagmentOwner")]
         public async Task<ActionResult<IEnumerable<EngagementDTO>>> GetAllengagement()
         {
             try
@@ -35,6 +39,7 @@ namespace LevviaApi.Controllers
 
 
         [HttpPost("AddEngagement")]
+        [Authorize(Roles = "EngagmentOwner")]
         public async Task<ActionResult> AddEngagement([FromBody] EngagementDTO  engagementDTO)
         {
             try

@@ -1,5 +1,6 @@
 ﻿using DTO;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Web.Resource;
 using Services.Interface;
 using Services.ServicesRepos;
 
@@ -9,6 +10,7 @@ namespace LevviaApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
     public class CommanController : ControllerBase
     {
         private readonly ICommanService _commanSevice;
