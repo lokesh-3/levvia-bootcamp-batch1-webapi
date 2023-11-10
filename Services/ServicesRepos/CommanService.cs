@@ -23,13 +23,20 @@ namespace Services.ServicesRepos
         public async Task<List<CountryDTO>> GetAllCountry()
         {
             var countryDTOs = new List<CountryDTO>();
-            var data = await _unitOfWork.country.GetAll();
-           // countryDTOs = data.Select(x => _mapper.Map<CountryDTO>(x)).ToList();
-            foreach (var item in data)
+            try
             {
-                countryDTOs.Add(new CountryDTO { Id=item.Id,CountyName=item.CountyName,IsActive=item.IsActive});
-            }
+                var data = await _unitOfWork.country.GetAll();
+                foreach (var item in data)
+                {
+                    countryDTOs.Add(new CountryDTO { Id = item.Id, CountyName = item.CountyName, IsActive = item.IsActive });
+                }
 
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
             return countryDTOs;
         }
 
