@@ -4,12 +4,24 @@ using DataBase.Interface;
 using DataBase.Repository;
 using DataBase.UnitOfWork;
 using DTO.AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Web;
 using Services.Interface;
 using Services.ServicesRepos;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Azure Role based Authentication and Authorization
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+
+//For CORS
+builder.Services.AddCors(options => options.AddPolicy("CorsPolicy", policy =>
+{
+    policy.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins(builder.Configuration["ui_url"]);
+}));
 
 // Add services to the container.
 
@@ -68,9 +80,11 @@ app.UseCors(options =>
 });
 app.UseHttpsRedirection();
 
+app.UseCors("CorsPolicy");
+
+app.UseAuthentication();
+
 app.UseAuthorization();
-var host = builder.Configuration["ui_url"];
-app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins(host));
 
 app.MapControllers();
 

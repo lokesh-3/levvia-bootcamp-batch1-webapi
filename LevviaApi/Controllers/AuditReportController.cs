@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Services.Interface;
 using DTO;
+using Microsoft.Identity.Web.Resource;
 
 namespace Webapi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
     public class ReportDownloadController : ControllerBase
     {
         IAuditReportService _auditReportService;
