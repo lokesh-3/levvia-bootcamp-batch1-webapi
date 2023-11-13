@@ -40,6 +40,7 @@ builder.Services.AddScoped<IEmailService, EmailServices>();
 builder.Services.AddScoped<IAuditReportService, AuditReportService>();
 builder.Services.AddScoped<IFileRepository, FileRepository>();
 builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddScoped<IAccountDetailsService, AccountDetailsService>();
 
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
