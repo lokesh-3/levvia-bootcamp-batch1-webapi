@@ -18,6 +18,7 @@ namespace DTO.AutoMapper
             CreateMap<AuditorsDetails, AuditorsDetailsDTO>().ReverseMap();
             CreateMap<Email, EmailDto>().ReverseMap();
             CreateMap<AuditReport, AuditReportDTO>().ReverseMap();
+            CreateMap<User, UserDTO>().ReverseMap();
         }
     }
 }
