@@ -13,6 +13,7 @@ namespace DataBase.UnitOfWork
         IEngagementRepository engagements { get; }
         ICountryRepository country { get; }
         IFileRepository file { get; }
+        IAuditOutcomeMasterRepository auditOutcomeMaster { get; }
 
 
         int Complete();
