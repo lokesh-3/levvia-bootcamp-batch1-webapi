@@ -37,6 +37,21 @@ namespace LevviaApi.Controllers
         }
 
 
+        [HttpGet("GetEngagementById")]
+        [Authorize(Roles = "EngagmentOwner")]
+        public async Task<ActionResult<EngagementDTO>> GetEngagementById(int id)
+        {
+            try
+            {
+                var engagementDTOs = await _engagementSevice.GetEngagementById(id);
+                return Ok(engagementDTOs);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
 
         [HttpPost("AddEngagement")]
         [Authorize(Roles = "EngagmentOwner")]
