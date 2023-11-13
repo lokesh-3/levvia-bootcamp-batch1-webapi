@@ -19,6 +19,7 @@ namespace DataBase.UnitOfWork
             country=new CountryRepository(_context);
             file=new FileRepository(_context);
             auditOutcomeMaster = new AuditOutcomeMasterRepository(_context);
+            users=new UserRepository(_context);
         }
         public int Complete()
         {
@@ -35,6 +36,7 @@ namespace DataBase.UnitOfWork
         public ICountryRepository country { get; private set; }
 
         public IFileRepository file { get; private set; }
+        public IUserRepository users { get; private set; }
 
         public IAuditOutcomeMasterRepository auditOutcomeMaster { get; private set; }
 
