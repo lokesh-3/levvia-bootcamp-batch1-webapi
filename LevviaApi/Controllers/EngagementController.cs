@@ -21,7 +21,7 @@ namespace LevviaApi.Controllers
         }
         // GET: api/<EngagementController>
         [HttpGet("GetAll")]
-        [Authorize(Roles = "EngagmentOwner")]
+       // [Authorize(Roles = "EngagmentOwner")]
         public async Task<ActionResult<IEnumerable<EngagementDTO>>> GetAllengagement()
         {
             try
@@ -39,7 +39,7 @@ namespace LevviaApi.Controllers
 
 
         [HttpPost("AddEngagement")]
-        [Authorize(Roles = "EngagmentOwner")]
+       // [Authorize(Roles = "EngagmentOwner")]
         public async Task<ActionResult> AddEngagement([FromBody] EngagementDTO  engagementDTO)
         {
             try
