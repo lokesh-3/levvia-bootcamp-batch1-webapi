@@ -1,18 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Entities
 {
+    [Table("AccountDetails")]
     public class AccountDetails
     {
-        public int Id { get; set; }
-        public string AccountName { get; set; }
-        public decimal AccountReceivables { get; set; }
+        [Key]
+        public int AccountId { get; set; }
+        public string AccountNumber { get; set; }
+        public decimal AccountRecievable { get; set; }
         public decimal Cash { get; set; }
-        public decimal OtherExpeness { get; set;}
-        public decimal Inventory { get; set;}
+        public decimal OtherExpenses { get; set; }
+        public decimal Inventory { get; set; }
+        public string AuditOutcome { get; set; }
     }
 }

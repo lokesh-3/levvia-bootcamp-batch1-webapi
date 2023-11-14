@@ -1,6 +1,4 @@
-﻿using DTO;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Services.Interface;
 
 namespace LevviaApi.Controllers
@@ -20,7 +18,7 @@ namespace LevviaApi.Controllers
         {
             try
             {
-                var accountDetails = await _accountDetailsService.GetAccountDetails(int id);
+                var accountDetails = await _accountDetailsService.GetAccountDetails(id);
                 return Ok(accountDetails);
             }
             catch (Exception e)
