@@ -44,6 +44,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuditOutcomeMasterRepository, AuditOutcomeMasterRepository>();
 
+builder.Services.AddScoped<IAccountDetailsService, AccountDetailsService>();
 
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 

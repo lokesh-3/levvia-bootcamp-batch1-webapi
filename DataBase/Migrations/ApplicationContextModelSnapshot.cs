@@ -21,6 +21,39 @@ namespace DataBase.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Entities.AccountDetails", b =>
+                {
+                    b.Property<int>("AccountId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AccountId"));
+
+                    b.Property<string>("AccountNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("AccountRecievable")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("AuditOutcome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Cash")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Inventory")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("OtherExpenses")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("AccountId");
+
+                    b.ToTable("AccountDetails");
+                });
+
             modelBuilder.Entity("Entities.Attachment", b =>
                 {
                     b.Property<int>("Id")
