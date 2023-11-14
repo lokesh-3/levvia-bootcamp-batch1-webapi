@@ -42,6 +42,8 @@ builder.Services.AddScoped<IFileRepository, FileRepository>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAuditOutcomeMasterRepository, AuditOutcomeMasterRepository>();
+
 
 builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
@@ -50,6 +52,7 @@ builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericReposi
 builder.Services.AddScoped<IEngagementSevice, EngagementService>();
 builder.Services.AddScoped<ICommanService, CommanService>();
 builder.Services.AddScoped<IAudtiMasterService, AudtiMasterService>();
+builder.Services.AddScoped<IAuditOutcomeMasterService, AuditOutcomeMasterService>();
 
 
 

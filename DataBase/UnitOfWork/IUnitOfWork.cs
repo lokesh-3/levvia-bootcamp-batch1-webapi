@@ -14,6 +14,7 @@ namespace DataBase.UnitOfWork
         ICountryRepository country { get; }
         IFileRepository file { get; }
         IUserRepository users { get; }
+        IAuditOutcomeMasterRepository auditOutcomeMaster { get; }
 
 
         int Complete();
