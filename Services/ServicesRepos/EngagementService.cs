@@ -46,5 +46,13 @@ namespace Services.ServicesRepos
             getallengagements = data.Select(x => _mapper.Map<EngagementDTO>(x)).ToList();
             return getallengagements;
         }
+
+        public async Task<EngagementDTO> GetEngagementById(int engagementId)
+        {
+            var getEngagement = new EngagementDTO();
+            var data = await _unitOfWork.engagements.GetById(engagementId);
+            getEngagement = _mapper.Map<EngagementDTO>(data);
+            return getEngagement;
+        }
     }
 }
