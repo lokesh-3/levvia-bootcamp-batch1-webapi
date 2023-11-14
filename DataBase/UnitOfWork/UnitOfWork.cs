@@ -21,6 +21,7 @@ namespace DataBase.UnitOfWork
             file=new FileRepository(_context);
             auditOutcomeMaster = new AuditOutcomeMasterRepository(_context);
             users=new UserRepository(_context);
+            accountDetails = new AccountDetailsRepository(_context);
         }
         public int Complete()
         {

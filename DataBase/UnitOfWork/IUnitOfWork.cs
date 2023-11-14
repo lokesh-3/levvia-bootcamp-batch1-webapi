@@ -16,6 +16,7 @@ namespace DataBase.UnitOfWork
         IUserRepository users { get; }
         IAuditOutcomeMasterRepository auditOutcomeMaster { get; }
 
+        IAccountDetailsRepository accountDetails { get; }
 
         int Complete();
     }
