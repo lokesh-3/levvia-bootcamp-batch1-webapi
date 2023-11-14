@@ -15,6 +15,9 @@ namespace DataBase
         public DbSet<AuditMaster> auditMasters { get; set; }
         public DbSet<Attachment> attachments { get; set; }
         public DbSet<AccountDetails> AccountDetails { get; set; }
+        public DbSet<AuditOutcomeMaster> auditOutcomeMasters { get; set; }
+        public DbSet<User> users { get; set; }
+
 
     }
 }
