@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataBase.Interface
 {
-    public interface IClientAuditorsRepository:IGenericRepository<ClientAuditors>
+    public interface IClientAuditorsRepository : IGenericRepository<ClientAuditors>
     {
     }
 }

@@ -11,5 +11,16 @@
         public string EngagementEndDate { get; set; }
 
         public List<int> Auditorids { get; set; }
+        public string Audittype { get; set; }
+
+        public int AccountId { get; set; }
+        public string AccountNumber { get; set; }
+        public decimal AccountRecievable { get; set; }
+        public decimal Cash { get; set; }
+        public decimal OtherExpenses { get; set; }
+        public decimal Inventory { get; set; }
+        public int AuditOutcomeId { get; set; }
+
+
     }
 }

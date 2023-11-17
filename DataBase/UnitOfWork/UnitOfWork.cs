@@ -17,6 +17,7 @@ namespace DataBase.UnitOfWork
         {
             _context = context;
             engagements = new EngagementRepository(_context);
+            clientAuditors = new ClientAuditorsRepository(_context);
             country=new CountryRepository(_context);
             file=new FileRepository(_context);
             auditOutcomeMaster = new AuditOutcomeMasterRepository(_context);
@@ -36,6 +37,7 @@ namespace DataBase.UnitOfWork
         }
 
         public IEngagementRepository engagements { get; private set; }
+        public IClientAuditorsRepository clientAuditors { get; private set; }
 
         public ICountryRepository country { get; private set; }
 

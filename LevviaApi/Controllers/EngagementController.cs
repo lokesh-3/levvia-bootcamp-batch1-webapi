@@ -37,7 +37,7 @@ namespace LevviaApi.Controllers
         }
 
         [HttpGet("GetEngagementById")]
-        [Authorize(Roles = "EngagmentOwner")]
+        //[Authorize(Roles = "EngagmentOwner")]
         public async Task<ActionResult<EngagementDTO>> GetEngagementById(int id)
         {
             try
@@ -58,6 +58,21 @@ namespace LevviaApi.Controllers
             try
             {
                 var remainingMentees = await _engagementSevice.AddEngagement(engagementDTO);
+                return Ok(remainingMentees);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while fetching remaining mentees.");
+            }
+        }
+
+        [HttpPost("UpdateEngagement")]
+        // [Authorize(Roles = "EngagmentOwner")]
+        public async Task<ActionResult> UpdateEngagement([FromBody] EngagementDTO engagementDTO)
+        {
+            try
+            {
+                var remainingMentees = await _engagementSevice.UpdateEngagement(engagementDTO);
                 return Ok(remainingMentees);
             }
             catch (Exception ex)

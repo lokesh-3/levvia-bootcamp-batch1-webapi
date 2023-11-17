@@ -12,5 +12,6 @@ namespace Services.Interface
         public Task<List<EngagementDTO>> GetAllEngagements();
         public Task<EngagementDTO> GetEngagementById(int id);
         public Task<EngagementDTO> AddEngagement( EngagementDTO engagementDTO);
+        public Task<EngagementDTO> UpdateEngagement(EngagementDTO engagementDTO);
     }
 }
