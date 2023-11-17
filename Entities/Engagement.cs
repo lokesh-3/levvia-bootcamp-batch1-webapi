@@ -15,7 +15,8 @@ namespace Entities
         public string EngagementStartDate { get; set; }
         public string EngagementEndDate { get; set; }
         //public virtual Country Country { get; set; }
-
+        public int AuditType { get; set; }
+        public int AuditOutcome { get; set; }
 
     }
 }

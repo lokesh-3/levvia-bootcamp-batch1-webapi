@@ -17,7 +17,7 @@ namespace DataBase
         public DbSet<AccountDetails> AccountDetails { get; set; }
         public DbSet<AuditOutcomeMaster> auditOutcomeMasters { get; set; }
         public DbSet<User> users { get; set; }
-
+        public DbSet<ClientAuditors> clientAuditors { get; set; }
 
     }
 }
