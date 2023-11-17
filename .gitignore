@@ -366,3 +366,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/DataBase/Migrations/20231109072036_InitialSchoolDB.cs
+/DataBase/Migrations

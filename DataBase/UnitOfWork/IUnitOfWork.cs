@@ -19,7 +19,6 @@ namespace DataBase.UnitOfWork
         IAudtiMasterRepository auditMaster { get; }
 
         IAccountDetailsRepository accountDetails { get; }
-        IClientAuditorsRepository clientAuditors { get; }
 
         int Complete();
     }

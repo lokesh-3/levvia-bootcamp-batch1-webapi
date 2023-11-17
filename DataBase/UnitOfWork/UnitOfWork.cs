@@ -24,7 +24,7 @@ namespace DataBase.UnitOfWork
             users=new UserRepository(_context);
             accountDetails = new AccountDetailsRepository(_context);
             auditMaster = new AudtiMasterRepository(_context);
-            clientAuditors = new ClientAuditorsRepository(_context);
+            
         }
         public int Complete()
         {
@@ -49,7 +49,6 @@ namespace DataBase.UnitOfWork
         public IAccountDetailsRepository accountDetails { get; private set; }
 
         public IAudtiMasterRepository auditMaster { get; private set; }
-        public IClientAuditorsRepository clientAuditors { get; private set; }
 
         public IGenericRepository<T> GetGenericRepository<T>() where T : class
         {
