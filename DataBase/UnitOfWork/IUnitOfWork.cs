@@ -16,8 +16,10 @@ namespace DataBase.UnitOfWork
         IFileRepository file { get; }
         IUserRepository users { get; }
         IAuditOutcomeMasterRepository auditOutcomeMaster { get; }
+        IAudtiMasterRepository auditMaster { get; }
 
         IAccountDetailsRepository accountDetails { get; }
+        IClientAuditorsRepository clientAuditors { get; }
 
         int Complete();
     }

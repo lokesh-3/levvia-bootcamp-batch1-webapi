@@ -23,6 +23,8 @@ namespace DataBase.UnitOfWork
             auditOutcomeMaster = new AuditOutcomeMasterRepository(_context);
             users=new UserRepository(_context);
             accountDetails = new AccountDetailsRepository(_context);
+            auditMaster = new AudtiMasterRepository(_context);
+            clientAuditors = new ClientAuditorsRepository(_context);
         }
         public int Complete()
         {
@@ -45,6 +47,9 @@ namespace DataBase.UnitOfWork
         public IAuditOutcomeMasterRepository auditOutcomeMaster { get; private set; }
 
         public IAccountDetailsRepository accountDetails { get; private set; }
+
+        public IAudtiMasterRepository auditMaster { get; private set; }
+        public IClientAuditorsRepository clientAuditors { get; private set; }
 
         public IGenericRepository<T> GetGenericRepository<T>() where T : class
         {

@@ -9,8 +9,5 @@ namespace DataBase.Interface
 {
     public interface IClientAuditorsRepository : IGenericRepository<ClientAuditors>
     {
-
-        //public Task<ClientAuditors> GetClientAuditors(ClientAuditors clientAuditorsRepository);
-
     }
 }
