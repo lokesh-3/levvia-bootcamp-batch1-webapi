@@ -18,6 +18,7 @@ namespace Entities
         public decimal Cash { get; set; }
         public decimal OtherExpenses { get; set; }
         public decimal Inventory { get; set; }
-        public string AuditOutcome { get; set; }
+        public int AuditOutcomeId { get; set; }
+        public int ClientId { get; set; }
     }
 }
