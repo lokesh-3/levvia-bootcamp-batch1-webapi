@@ -74,10 +74,10 @@ namespace Services.ServicesRepos
 
             var engagementDetails = _unitOfWork.engagements.Find(x=>x.ClientId == auditId).FirstOrDefault();
             var auditType = _unitOfWork.auditMaster.Find(x=>x.Id==engagementDetails.AuditType).FirstOrDefault();
-            var auditOutcome = _unitOfWork.auditOutcomeMaster.Find(x=>x.Id == engagementDetails.AuditOutcome).FirstOrDefault();
+            var accountDetails = _unitOfWork.accountDetails.Find(x=>x.ClientId==engagementDetails.ClientId).FirstOrDefault();
+            var auditOutcome = _unitOfWork.auditOutcomeMaster.Find(x=>x.Id == accountDetails.AuditOutComeId).FirstOrDefault();
             var auditors = _unitOfWork.clientAuditors.Find(x=>x.ClientId==auditId).Select(x=>x.AuditorId).ToList();
             var users = _unitOfWork.users.Where(x=>auditors.Contains(x.Id)).ToList();
-            //var auditorList = 
 
             auditReportDTO.AuditType = auditType.AuditName;
             auditReportDTO.ClientName = engagementDetails.ClientName;
