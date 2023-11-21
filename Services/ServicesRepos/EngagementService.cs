@@ -2,6 +2,7 @@
 using DataBase.UnitOfWork;
 using DTO;
 using Entities;
+using Microsoft.AspNetCore.Http;
 using Services.Interface;
 using System;
 using System.Collections.Generic;
@@ -15,12 +16,13 @@ namespace Services.ServicesRepos
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly IFileService _fileservice;
 
-        public EngagementService(IUnitOfWork unitOfWork, IMapper mapper)
+        public EngagementService(IUnitOfWork unitOfWork, IMapper mapper,IFileService fileservice)
         {
             this._unitOfWork = unitOfWork;
             _mapper = mapper;
-
+            this._fileservice = fileservice;
         }
 
         public async Task<EngagementDTO> AddEngagement(EngagementDTO engagementDTO)
@@ -47,8 +49,11 @@ namespace Services.ServicesRepos
             eng.ClientId = engagementDTO.ClientId;
             eng.EngagementStartDate = engagementDTO.EngagementStartDate;
             eng.EngagementEndDate = engagementDTO.EngagementEndDate;
+            eng.CountyId = engagementDTO.CountyId;
+            eng.AuditType = engagementDTO.Audittype;
             _unitOfWork.engagements.Update(eng);
             int row = _unitOfWork.Complete();
+           
             if (row > 0)
             {
                 AccountDetails accountDetails = new AccountDetails();
@@ -59,8 +64,10 @@ namespace Services.ServicesRepos
                 accountDetails.OtherExpenses = engagementDTO.OtherExpenses;
                 accountDetails.Inventory = engagementDTO.Inventory;
                 accountDetails.AuditOutcomeId = engagementDTO.AuditOutcomeId;
+                accountDetails.AuditStatus = engagementDTO.AuditStatus;
                 await _unitOfWork.accountDetails.AddAsync(accountDetails);
                 _unitOfWork.Complete();
+                
             }
             return engagement;
         }

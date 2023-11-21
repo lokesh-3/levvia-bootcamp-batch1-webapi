@@ -20,5 +20,7 @@ namespace Entities
         public decimal Inventory { get; set; }
         public int AuditOutcomeId { get; set; }
         public int ClientId { get; set; }
+        public int AuditStatus { get; set; }
+
     }
 }
