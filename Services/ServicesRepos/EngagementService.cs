@@ -34,6 +34,8 @@ namespace Services.ServicesRepos
             eng.ClientId = engagementDTO.ClientId;
             eng.EngagementStartDate = engagementDTO.EngagementStartDate;
             eng.EngagementEndDate = engagementDTO.EngagementEndDate;
+            eng.AuditType = engagementDTO.Audittype;
+            eng.CountyId = engagementDTO.CountyId;
             var user = await _unitOfWork.engagements.AddEngagement(eng);
             _unitOfWork.Complete();
             engagement.ClientId = user.ClientId;
