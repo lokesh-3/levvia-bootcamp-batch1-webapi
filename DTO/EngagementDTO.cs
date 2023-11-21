@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Entities;
+using Microsoft.AspNetCore.Http;
 
 namespace DTO
 {
@@ -22,6 +23,8 @@ namespace DTO
         public int AuditOutcomeId { get; set; }
 
         public int AuditStatus { get; set; }
+        public AuditStatus AuditStatusFinal { get; set; }
+        public AuditMaster AuditTypes { get; set; }
         //public IFormFile Attachment { get; set; }
     }
 }
