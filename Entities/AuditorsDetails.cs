@@ -16,7 +16,7 @@ namespace Entities
         [MaxLength(100)]
         public string Name { get; set; }
         public int ClientId { get; set; }
-
+        public int AuditStatus { get; set; }
     }
 
 }
