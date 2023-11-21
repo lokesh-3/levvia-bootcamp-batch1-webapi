@@ -66,7 +66,7 @@ namespace LevviaApi.Controllers
             }
         }
 
-        [HttpPost("UpdateEngagement")]
+        [HttpPut("UpdateEngagement")]
         // [Authorize(Roles = "EngagmentOwner")]
         public async Task<ActionResult> UpdateEngagement([FromBody] EngagementDTO engagementDTO)
         {
