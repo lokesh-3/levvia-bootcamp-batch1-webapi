@@ -18,6 +18,13 @@ namespace DataBase
         public DbSet<AccountDetails> AccountDetails { get; set; }
         public DbSet<AuditOutcomeMaster> auditOutcomeMasters { get; set; }
         public DbSet<User> users { get; set; }
-
+        public DbSet<ViewEngagements> ViewEngagements { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ViewEngagements>(e =>
+            {
+                e.HasNoKey();
+            });
+        }
     }
 }

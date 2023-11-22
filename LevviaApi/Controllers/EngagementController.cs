@@ -1,6 +1,8 @@
-﻿using DTO;
+﻿using DataBase;
+using DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web.Resource;
 using Services.Interface;
 
@@ -14,11 +16,14 @@ namespace LevviaApi.Controllers
     public class EngagementController : ControllerBase
     {
         private readonly IEngagementSevice  _engagementSevice;
-        public EngagementController(IEngagementSevice engagementSevice)
+        private readonly ApplicationContext _context;
+        public EngagementController(IEngagementSevice engagementSevice , ApplicationContext context)
         {
             _engagementSevice = engagementSevice;
-            
+            _context = context;
+
         }
+
         // GET: api/<EngagementController>
         [HttpGet("GetAll")]
        // [Authorize(Roles = "EngagmentOwner")]
@@ -79,6 +84,15 @@ namespace LevviaApi.Controllers
             {
                 return StatusCode(500, "An error occurred while fetching remaining mentees.");
             }
+        }
+
+        [HttpGet("ViewEngagements")]
+        public IActionResult GetEngagements()
+        {
+            var engagements = _context.ViewEngagements.FromSqlRaw("EXEC GetViewEngagements").ToList();
+           
+            return Ok(engagements);
+            
         }
 
     }
