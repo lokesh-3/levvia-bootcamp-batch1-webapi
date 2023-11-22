@@ -10,8 +10,8 @@ namespace DTO
     public class EmailDto
     {
         [Required]
-        [EmailAddress]
-        public string To { get; set; }
+        //[EmailAddress]
+        public string[] To { get; set; }
         //public string Subject { get; set; } = string.Empty;
         //public string Body { get; set; } = string.Empty;
     }
