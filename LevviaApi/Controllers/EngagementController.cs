@@ -1,7 +1,9 @@
 ﻿using DataBase;
 using DTO;
+using Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web.Resource;
 using Services.Interface;
@@ -95,5 +97,19 @@ namespace LevviaApi.Controllers
             
         }
 
+        [HttpPost("CreateEngagementBySP")]
+        public IActionResult CallStoredProcedureWithParams(CreateEngagements obj)
+        {
+            //var eng = obj as Engagement;
+            var clientName = new SqlParameter("@clientName", obj.ClientName);
+            var engagementStartDate = new SqlParameter("@engagementStartDate", obj.EngagementStartDate);
+            var engagementEndDate = new SqlParameter("@engagementEndDate", obj.EngagementEndDate);
+            var countyId = new SqlParameter("@countyId", obj.CountryID);
+            var auditType = new SqlParameter("@audittype", obj.AuditType);
+            var result = _context.Database.ExecuteSqlRaw("EXEC CreateEngagement @clientName, @engagementStartDate, @engagementEndDate, @countyId, @audittype",
+                                        clientName, engagementStartDate, engagementEndDate, countyId, auditType);
+
+            return Ok(result);
+        }
     }
 }

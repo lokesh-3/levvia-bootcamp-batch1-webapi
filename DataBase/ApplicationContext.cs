@@ -19,9 +19,14 @@ namespace DataBase
         public DbSet<AuditOutcomeMaster> auditOutcomeMasters { get; set; }
         public DbSet<User> users { get; set; }
         public DbSet<ViewEngagements> ViewEngagements { get; set; }
+        public DbSet<CreateEngagements> CreateEngagements { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ViewEngagements>(e =>
+            {
+                e.HasNoKey();
+            });
+            modelBuilder.Entity<CreateEngagements>(e =>
             {
                 e.HasNoKey();
             });
